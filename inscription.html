@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PAGE D'INSCRIPTION</title>
+
+        <style>
+
+            #section1{
+                margin-right: 35%;
+                margin-left: 5%;
+                font-family: 'Century Gothic',verdana sans serif;
+                font-weight: bold ;
+            }
+
+            #section1:hover{
+                box-shadow: 0px 1px 3px teal;
+                color: #FFF;
+                background-color: #424558;
+            }
+
+            #section1 input{
+                width: 300px;
+                height: 20px;
+            }
+            #section1 label{
+                display: inline-block;
+                width: 170px;
+            }
+            input[type="submit"]{
+                letter-spacing: 3px;
+                color: white;
+                background-color: #08B ;
+                border-radius: 20px;
+                padding: 10px 10px 10px 10px ;
+                margin-left: 50%;
+                text-transform: uppercase;
+                cursor: pointer;
+
+            }
+
+
+        </style>
+
+
+
+    </head>
+    <body>
+        <br><br>
+        <form action="main.php" method="post">
+            <fieldset id="section1">
+                <label for="nom">NOM :</label>
+                <input type="text" id="nom" name="nom" required autofocus> <br><br>
+
+                <label for="prenom">PRENOM :</label>
+                <input type="text" id="prenom" name="prenom" required="required" > <br><br>
+
+                <label for="username">NOM D'UTILISATEUR :</label>
+                <input type="text" id="username" name="username" required="required"> <br><br>
+
+                <label for="mail">E-MAIL : </label>
+                <input type="email" id="mail" name="email" required="required" > <br><br>
+
+                <label for="mot_de_passe">MOT DE PASSE :</label>
+                <input type="password" id="mot_de_passe" name="mot_de_passe" required="required"> <br><br>
+
+                <label for="telephone">TELEPHONE :</label>
+                <input type="tel" id="telephone" name="telephone" required="required" placeholder="exemple : +228 79802867"> 
+            </fieldset>
+            <br> <br> 
+
+            <input type="submit" value="S'inscrire">
+        </form>
+        
+    </body>
+
+</html>

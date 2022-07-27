@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Learn mathematics</title>
+        <link rel="shortcut icon" href="mth.png" />
+       <style>
+ 
+           body{
+                font-family: 'Source code pro',calibri,serif;
+                margin: 0px;
+                padding: 0px;
+           }
+
+           nav{
+               width: 100%;
+               background-color: rgba(46, 46, 214, 0.726);
+               font-weight: bold;
+           }
+
+           nav > ul{
+               margin: 0px;
+               padding: 0px;
+           }
+           nav li {
+               list-style-type: none;
+               float: left;
+               position: relative;
+               margin-left: 4%;
+
+           }
+
+           nav > ul::after{
+                content:"" ;
+                display: table;
+                clear: both;
+           }
+
+           nav a{
+               display: inline-block;
+               text-decoration: none;
+           }
+
+           nav > ul >li{
+               float: left;
+               position: relative;
+
+           }
+
+           .sous_menu{
+               display: none;
+           }
+           nav > ul > li > a{
+               padding: 20px 30px;
+               color: #FFF;
+               
+           }
+
+           nav > ul > li:hover a{
+                padding: 15px 30px 20px 30px;
+           }
+
+           nav li:hover .sous_menu{
+                display: inline-block;
+                position: absolute;
+                top: 100%;
+                left: 0%;
+                padding: 0px;
+                z-index: 1000;
+           }
+           .sous_menu li a{
+                padding: 15px 30px; 
+                font-size: 13px;
+                color: #222538;
+                width: 270px;
+           }
+
+           .menu_cours:hover{
+               border-top: 3px solid #0B8;
+               background-color: rgba(228, 77, 38, 0.2);
+
+           }
+
+           .menu_question:hover{
+               border-top: 3px solid #007045;
+               background-color: rgba(000, 112, 192, 0.2);
+
+           }
+
+           .menu_contact:hover{
+               border-top: 3px solid #f1dc4f ;
+               background-color: rgba(241, 211, 79, 0.2);
+           }
+
+           .menu_inscript:hover,.menu_connexion:hover{
+                border-top: 3px solid #BBB;
+                background-color: rgba(220, 220, 220, 0.2);
+           }
+
+           .sous_menu li{
+               border-bottom: 1px solid #CCC;
+           }
+
+           .menu_cours .sous_menu{
+               background-color: RGB(250, 215, 100);
+           }    
+
+           .menu_question .sous_menu{
+               background-color: rgb(41, 236, 214);
+           }
+
+           .sous_menu li:hover a{
+               color: #FFF;
+               font-weight: bold;
+               
+           }
+
+           nav input[type=checkbox] , nav label{
+               display: none;
+           }
+           
+
+
+/*
+           .menu_cours .sous_menu li:hover{
+               background-color: rgb(100, 100, 60);
+           }
+           .menu_question .sous_menu li:hover{
+               background-color: rgb(000, 115, 200);
+           } */
+
+           #section1{
+               padding-bottom: 10%;
+               background-color: rgba(0, 0, 255, 0.705);
+               width: 100%;
+           }
+
+           section h1{
+               text-align: center;
+               color: white;
+              text-transform: capitalize; 
+              font-size: 25px;
+              letter-spacing: 2px;
+           }
+           #section1 p{
+               text-align: center;
+               font-family: 'Century Gothic',verdana sans serif;
+               color: white;
+               font-size: 15px;
+               font-weight: bold;
+           }
+           #section2 p{
+               padding-left: 3%;
+               font-weight: bold;
+               text-align: justify;
+           }
+
+           #section2 h2 span{
+               padding:8px 8px 8px 8px ;
+               margin-left: 4%;
+               border-radius: 15px;
+               background-color: rgb(44, 124, 170);
+               flex: auto;
+           
+           }
+
+           #section2 h2 span a{
+               text-decoration: none;
+               font-size: 25px;
+               color: white;
+               padding:14px 14px;
+
+           }
+
+           #section2 h2 span:hover{
+            box-shadow: 0px 0px 4px #555;
+            background-color: #0B8;
+           }
+
+
+           .mod1{
+               padding-left: 2%;
+               font-weight: bold;
+               font-size: 16px;
+           }
+
+           form{
+                padding-left: 2%;
+                font-weight: bold;
+                font-size: 20px;
+           }
+
+           #section3{
+               background-color: #222538;
+               color: white;
+               padding-left: 4%;
+               font-weight: bold;
+           }
+
+           #section3 h4 span{
+               text-indent: 30%;
+               padding:8px 8px 8px 8px ;
+               margin: 4% 2% 4% 5%;
+               border-radius: 15px;
+               flex: auto;
+               background-color: white;
+              
+
+           }
+
+           #section3 h4 span a{
+               text-decoration: none;
+               color: blue;
+               
+               
+           }
+
+
+
+           footer{
+               font-family: 'Century Gothic',calibri,serif;
+               background-color: #C5C5C5;
+               text-align: center;
+               border-top: 2px solid #AAA;
+               height: 100px;
+               padding-top: 40px;
+               font-weight: bold;
+           }
+
+           nav input[type=checkbox]:checked ~ ul{
+               display: block;
+
+           }
+
+           @media screen and (max-width: 780px){
+            .menu{
+                display: block;
+                color:#FFF;
+                background-color: #0B8;
+                text-align: center;
+                padding: 12px 0px;
+                
+            }
+            nav ul{
+                display: none;
+            }
+            nav ul li , nav ul li a{
+                width: 100%;
+                text-align: center;
+                
+            }
+            nav ul li a, nav ul li:hover a{
+                padding:12px 0px 0px 0px;
+
+            }
+            nav li:hover .sous_menu{
+                display: block;
+                position: static;
+            }
+
+            
+        }
+         
+        </style> 
+
+
+    </head>
+
+    <body >
+
+       <section id="section1">
+            <nav >
+                <label for="menu" class="menu">MENU</label>
+                <input type="checkbox" id="menu" role="button">
+            
+                <ul>
+                    <li class="menu_cours"><a href="cours.html"> Cours </a>
+                        <ul class="sous_menu" >
+                           <li ><a href="#">Mathematiques secondaire 1ere cycle</a> </li><br/>
+                           <li><a href="#">Mathematiques secondaire 2eme cycle</a></li><br/>
+                           <li><a href="#">Mathematiques Niveau Licence</a></li><br/>
+                           <li><a href="#">Programmation</a> </li>
+                
+                       </ul>
+                    
+                    </li>
+                    <li class="menu_question"><a href="question.html"> Questionnaires</a>
+                        <ul class="sous_menu">
+                            <li><a href="#">Préliminaires</a></li>
+                            <li><a href="#">Niveau I</a></li>
+                            <li><a href="#">Niveau II</a></li>
+                        </ul>
+                    
+                    </li>
+                    <li class="menu_contact"> <a href="contacte.html"> Contacts</a>
+                     <!--   <ul class="sous_menu">
+                            <li><a href="https://api.whatsapp.com/send?phone=22879802867"><img src="https://i.pinimg.com/736x/b6/79/6c/b6796c1088318a47e35459cac2f6d683.jpg" style="width: 10%;"/>
+                            </a></li>
+                            <li><a href="mailto:kokoukpomblawou@gmail.com"><img src=""
+                              ></a> </li>
+                        </ul> -->
+                    
+                    </li>
+                    <li class="menu_inscript"><a href="inscription.html">S'inscrire</a></li>
+                    <li class="menu_connexion"> <a href="connexion.html" >Se connecter </a></li>
+
+                </ul>
+          
+            </nav>
+            <h1>cours &amp travaux dirigés ( TD ) avec details en Mathematiques et en Programmation. </h1> 
+            <p>Fortifiez vos compétences en Mathématiques et en Programmation.Propulsez vos carrières en sciences.</p>
+        </section>
+        <section id="section2">
+            <p>Cet encadrement en Mathématiques et en Programmation est très riches et vous sera indispensable afin que vous 
+                puissiez faire correctent des pas dans ces disciplines. </p>
+                <p>Cliquez ci-dessous pour prendre part .</p> <br/>
+
+                <h2><span><a href="payment.html" >J'accède au Travaux Dirigés ( TD )</a></span></h2>
+                <form >
+                    Modalités : <br> <br>
+                    <input type="checkbox" class="mod" checked>
+                    <label class="mod1">2h de travail en ligne ; accessible comme le participant le souhaite et à son rythme.</label><br>
+                    <input type="checkbox" class="mod" checked>
+                    <label class="mod1">Accès à des tests pour voir l'evolution du  travail.</label><br>
+                    <input type="checkbox" class="mod" checked>
+                    <label class="mod1">Pas de prérequis hormis avoir des bases en Mathématiques et en Algorithmiques et etre devoué.</label>
+                   
+                </form>
+
+        </section>
+
+        <section id="section3">
+            <h1>Rejoignez vos camarades éleves et étudiants.</h1>
+            <p>Apprennez la science, passez la vitesse supérieure et soyez reconnu(e) pour vos capacités. <br><br>
+            Chacun peut apprendre peu importe son niveau , son age. <br><br>
+             Accès en ligne comme en présentiel</p> <br>
+             <h4> <span><a href="payment.html">Je commence mon apprentissage</a></span></h4> <br> <br><br>
+        </section>
+            <footer>mathematics and computer science . &copy All  rights reserved</footer>
+
+    </body>
+
+
+</html>
